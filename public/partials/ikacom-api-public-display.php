@@ -11,9 +11,11 @@
  * @package    Ikacom_Api
  * @subpackage Ikacom_Api/public/partials
  */
-
-
- $image_src = "https://www.ikacom.fr/cartouche/sva/08/1/$sva/A300";
+$sva_number = $sva;
+ if (substr($sva, 0, 3) === '+33') {
+   $sva_number = substr($sva, 3);
+}
+ $image_src = "https://www.ikacom.fr/cartouche/sva/08/1/$sva_number/A300";
  $wallet_bal = get_user_meta( get_current_user_id(), 'wps_wallet', true );
  $wallet_bal = empty( $wallet_bal ) ? 0 : $wallet_bal;
 

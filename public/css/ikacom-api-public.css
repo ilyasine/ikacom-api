@@ -575,11 +575,16 @@ h2.payment-step span.step-number {
   line-height: 1.8;
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #84c340;
-  /* border: 1px solid #eeeeee; */
-  border-radius: 3px;
-  transition: all .3s ease;
-  padding: 18px 15px 18px 15px;
+  border: 1px solid #84c340 !important;
+  border: 1px solid #eeeeee;
+  border-radius: 3px !important;
+  transition: all .3s ease !important;
+  padding: 18px 15px 18px 15px !important;
+  height: initial !important;
+}
+
+.amount {
+  color: #57bf6d;
 }
 
 .access-code-input:focus,
